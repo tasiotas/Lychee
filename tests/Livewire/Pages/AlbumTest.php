@@ -15,7 +15,6 @@ namespace Tests\Livewire\Pages;
 use App\Enum\AlbumLayoutType;
 use App\Enum\SmartAlbumType;
 use App\Livewire\Components\Pages\Gallery\Album;
-use App\Livewire\Components\Pages\Gallery\Albums;
 use App\Models\Configs;
 use Livewire\Livewire;
 use Tests\Livewire\Base\BaseLivewireTest;
@@ -72,7 +71,7 @@ class AlbumTest extends BaseLivewireTest
 			->assertSet('flags.is_accessible', true)
 			->call('silentUpdate')
 			->assertOk()
-			->assertSet('back', route('livewire-gallery-album', ['albumId' => $this->album1->id ]));
+			->assertSet('back', route('livewire-gallery-album', ['albumId' => $this->album1->id]));
 	}
 
 	public function testMenus(): void
