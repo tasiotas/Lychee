@@ -41,6 +41,10 @@
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 
+	input:focus, textarea:focus, select:focus {
+		outline:none;
+	}
+
 	[x-cloak] {
 		display: none !important;
 	}
