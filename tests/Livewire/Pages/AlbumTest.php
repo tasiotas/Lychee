@@ -60,8 +60,7 @@ class AlbumTest extends BaseLivewireTest
 			->assertSet('flags.is_accessible', true)
 			->call('silentUpdate')
 			->assertOk()
-			->call('back')
-			->assertRedirect(Albums::class);
+			->assertSet('back', route('livewire-gallery'));
 	}
 
 	public function testPageLoginAndBackFromSubAlbum(): void
@@ -73,8 +72,7 @@ class AlbumTest extends BaseLivewireTest
 			->assertSet('flags.is_accessible', true)
 			->call('silentUpdate')
 			->assertOk()
-			->call('back')
-			->assertRedirect(route('livewire-gallery-album', ['albumId' => $this->album1->id]));
+			->assertSet('back', route('livewire-gallery-album', ['albumId' => $this->album1->id ]));
 	}
 
 	public function testMenus(): void

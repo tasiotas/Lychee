@@ -1,1 +1,1 @@
-<x-header.button {{ $attributes }} wire:click="back" icon="chevron-left" />
+<x-header.button {{ $attributes }} icon="chevron-left" />

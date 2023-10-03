@@ -1,6 +1,14 @@
 export default { albumView };
 
-export function albumView(nsfwAlbumsVisible_val, isFullscreen_val, canEdit_val, parent_id_val = null, albumIDs_val = [], photoIDs_val = []) {
+export function albumView(
+	nsfwAlbumsVisible_val,
+	isFullscreen_val,
+	canEdit_val,
+	parent_id_val = null,
+	back_val = "",
+	albumIDs_val = [],
+	photoIDs_val = []
+) {
 	return {
 		albumIDs: albumIDs_val,
 		photoIDs: photoIDs_val,
@@ -8,6 +16,7 @@ export function albumView(nsfwAlbumsVisible_val, isFullscreen_val, canEdit_val, 
 		selectedPhotos: [],
 		selectedAlbums: [],
 		parent_id: parent_id_val,
+		hrefBack: back_val,
 		canEdit: canEdit_val,
 		detailsOpen: false,
 		detailsActiveTab: 0,
@@ -151,7 +160,7 @@ export function albumView(nsfwAlbumsVisible_val, isFullscreen_val, canEdit_val, 
 					this.detailsOpen = false;
 				} else if (this.parent_id !== null) {
 					event.preventDefault();
-					this.$wire.back();
+					window.location.href = this.hrefBack;
 				}
 				return;
 			}

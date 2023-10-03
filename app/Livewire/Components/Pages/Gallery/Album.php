@@ -164,15 +164,13 @@ class Album extends Component implements Reloadable
 			->first();
 	}
 
-	public function back(): void
+	public function getBackProperty(): string
 	{
 		if ($this->album instanceof ModelsAlbum && $this->album->parent_id !== null) {
-			$this->redirect(route('livewire-gallery-album', ['albumId' => $this->album->parent_id]));
-
-			return;
+			return route('livewire-gallery-album', ['albumId' => $this->album->parent_id]);
 		}
 
-		$this->redirect(route('livewire-gallery'));
+		return route('livewire-gallery');
 	}
 
 	public function setCover(?string $photoID): void

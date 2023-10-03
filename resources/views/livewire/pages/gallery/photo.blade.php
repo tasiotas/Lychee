@@ -3,12 +3,13 @@
         @entangle('sessionFlags.is_fullscreen'),
         @js($photo->description !== null),
         @js($overlayType),
-        @js($flags->can_edit)
+        @js($flags->can_edit),
+        @js(route('livewire-gallery-album', ['albumId' => $this->albumId ]))
         )"
     @keydown.window="handleKeydown(event, $wire)">
     <!-- toolbar -->
     <x-header.bar class="opacity-0" x-bind:class="isFullscreen ? 'opacity-0 h-0' : 'opacity-100 h-14'">
-        <x-header.back @keydown.escape.window="$wire.back();" />
+        <x-header.back x-bind:href="hrefBack" />
         <x-header.title>
             @if ($photo->is_starred)
                 <x-icons.iconic icon="star" fill='fill-yellow-400' class="my-0 w-3 h-3 mb-1 mr-0 ml-0" />

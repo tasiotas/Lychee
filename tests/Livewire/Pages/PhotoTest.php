@@ -59,9 +59,7 @@ class PhotoTest extends BaseLivewireTest
 			->call('move')
 			->assertDispatched('openModal', 'forms.photo.move', '', [Params::PHOTO_IDS => [$this->photo1->id], Params::ALBUM_ID => $this->album1->id])
 			->call('delete')
-			->assertDispatched('openModal', 'forms.photo.delete', '', [Params::PHOTO_IDS => [$this->photo1->id], Params::ALBUM_ID => $this->album1->id])
-			->call('back')
-			->assertRedirect(route('livewire-gallery-album', ['albumId' => $this->album1->id]));
+			->assertDispatched('openModal', 'forms.photo.delete', '', [Params::PHOTO_IDS => [$this->photo1->id], Params::ALBUM_ID => $this->album1->id]);
 
 		// edges cases for Coordinates
 		Livewire::actingAs($this->userMayUpload1)->test(Photo::class,

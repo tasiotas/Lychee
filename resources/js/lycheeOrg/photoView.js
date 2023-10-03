@@ -1,6 +1,6 @@
 export default { photoView };
 
-export function photoView(detailsOpen_val, isFullscreen_val, has_description_val, overlayType_val, canEdit_val = false) {
+export function photoView(detailsOpen_val, isFullscreen_val, has_description_val, overlayType_val, canEdit_val = false, href_val = "") {
 	return {
 		detailsOpen: detailsOpen_val,
 		isFullscreen: isFullscreen_val,
@@ -9,6 +9,7 @@ export function photoView(detailsOpen_val, isFullscreen_val, has_description_val
 		editOpen: false,
 		donwloadOpen: false,
 		canEdit: canEdit_val,
+		hrefBack: href_val,
 
 		silentToggle(elem) {
 			this[elem] = !this[elem];
@@ -44,6 +45,21 @@ export function photoView(detailsOpen_val, isFullscreen_val, has_description_val
 				return;
 			}
 			console.log(document.activeElement.nodeName);
+
+			// escape
+			if (event.keyCode === 27) {
+				if (this.detailsOpen) {
+					event.preventDefault();
+					this.detailsOpen = false;
+				} else if (this.editOpen) {
+					event.preventDefault();
+					this.editOpen = false;
+				} else {
+					event.preventDefault();
+					window.location.href = this.hrefBack;
+				}
+				return;
+			}
 
 			// f
 			if (event.keyCode === 70) {

@@ -107,11 +107,6 @@ class Photo extends Component
 		return view('livewire.pages.gallery.photo');
 	}
 
-	public function back(): mixed
-	{
-		return $this->redirect(route('livewire-gallery-album', ['albumId' => $this->albumId]));
-	}
-
 	#[On('reloadPage')]
 	public function reloadPage(): void
 	{
