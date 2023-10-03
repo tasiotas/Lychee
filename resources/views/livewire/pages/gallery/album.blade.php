@@ -55,6 +55,7 @@
             @if ($num_children > 0 && $num_photos > 0)
                 <x-gallery.divider title="{{ __('lychee.PHOTOS') }}" />
             @endif
+            @if($num_photos > 0)
                 <div class="relative w-full h-0 -translate-y-5 text-right pr-7" x-data="{ layout: $wire.entangle('flags.layout') }" >
                     <a class="flex-shrink-0 px-1 cursor-pointer group" x-on:click="layout = 'square'"
                     title="{{ __('lychee.LAYOUT_SQUARES') }}" >
@@ -89,7 +90,7 @@
                          />
                     </a>
                 </div>
-                @if($num_photos > 0)
+            @endif
                 <div @class([
                     'relative w-full',
                     'm-4 flex flex-wrap' => $flags->layout() === \App\Enum\AlbumLayoutType::SQUARE,
@@ -103,7 +104,6 @@
                     x-grid
                 @endif
                 >
-                @endif
                 @foreach ($this->album->photos as $photo)
                     <x-gallery.album.thumbs.photo :data="$photo" albumId="{{ $albumId }}" :layout="$flags->layout()" />
                 @endforeach
