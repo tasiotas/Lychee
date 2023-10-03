@@ -122,21 +122,18 @@
         @can(App\Policies\PhotoPolicy::CAN_EDIT, [App\Models\Photo::class, $photo])
             <div class="h-full relative overflow-clip w-0 bg-dark-800 transition-all"
                 :class=" editOpen ? 'w-full' : 'w-0 translate-x-full'">
-                <livewire:modules.photo.properties :photo="$this->photo" />
+                <livewire:modules.photo.properties :photo="$this->photo" :lazy="false" />
             </div>
         @endcan
-        <aside id="lychee_sidebar_container" @class([
-            'h-full relative overflow-clip transition-all',
-            'w-[360px]' => $sessionFlags->are_photo_details_open,
-            'w-0 translate-x-full' => !$sessionFlags->are_photo_details_open,
-        ])
+        <aside id="lychee_sidebar_container" 
+            class="h-full relative overflow-clip transition-all"
             :class=" detailsOpen ? 'w-[360px]' : 'w-0 translate-x-full'">
-            <livewire:modules.photo.sidebar :photo="$this->photo" />
+            <livewire:modules.photo.sidebar :photo="$this->photo" lazy="on-load" />
         </aside>
     </div>
     @can(App\Policies\PhotoPolicy::CAN_DOWNLOAD, [App\Models\Photo::class, $photo])
         <div class="basicModalContainer transition-opacity duration-1000 ease-in animate-fadeIn
-    bg-black/80 z-50 fixed flex items-center justify-center w-full h-full top-0 left-0 box-border opacity-100"
+            bg-black/80 z-50 fixed flex items-center justify-center w-full h-full top-0 left-0 box-border opacity-100"
             data-closable="true" x-cloak x-show="donwloadOpen">
             <div class="basicModal transition-opacity ease-in duration-1000
         opacity-100 bg-gradient-to-b from-dark-300 to-dark-400
