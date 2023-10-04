@@ -56,7 +56,7 @@ export function photoView(detailsOpen_val, isFullscreen_val, has_description_val
 				} else {
 					event.preventDefault();
 					const url = document.getElementById("backButton").getAttribute("href");
-					Alpine.navigate(url)
+					Alpine.navigate(url);
 				}
 				return;
 			}

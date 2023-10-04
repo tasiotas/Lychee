@@ -152,7 +152,7 @@ export function albumView(nsfwAlbumsVisible_val, isFullscreen_val, canEdit_val, 
 				} else if (this.parent_id !== null) {
 					event.preventDefault();
 					const url = document.getElementById("backButton").getAttribute("href");
-					Alpine.navigate(url)
+					Alpine.navigate(url);
 				}
 				return;
 			}
