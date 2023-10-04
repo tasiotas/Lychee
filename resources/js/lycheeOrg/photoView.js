@@ -1,6 +1,6 @@
 export default { photoView };
 
-export function photoView(detailsOpen_val, isFullscreen_val, has_description_val, overlayType_val, canEdit_val = false, href_val = "") {
+export function photoView(detailsOpen_val, isFullscreen_val, has_description_val, overlayType_val, canEdit_val = false) {
 	return {
 		detailsOpen: detailsOpen_val,
 		isFullscreen: isFullscreen_val,
@@ -9,7 +9,6 @@ export function photoView(detailsOpen_val, isFullscreen_val, has_description_val
 		editOpen: false,
 		donwloadOpen: false,
 		canEdit: canEdit_val,
-		hrefBack: href_val,
 
 		silentToggle(elem) {
 			this[elem] = !this[elem];
@@ -56,7 +55,8 @@ export function photoView(detailsOpen_val, isFullscreen_val, has_description_val
 					this.editOpen = false;
 				} else {
 					event.preventDefault();
-					window.location.href = this.hrefBack;
+					const url = document.getElementById("backButton").getAttribute("href");
+					Alpine.navigate(url)
 				}
 				return;
 			}

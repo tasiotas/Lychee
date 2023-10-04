@@ -3,23 +3,18 @@
         @entangle('sessionFlags.is_fullscreen'),
         @js($photo->description !== null),
         @js($overlayType),
-        @js($flags->can_edit),
-        @js(route('livewire-gallery-album', ['albumId' => $this->albumId ]))
+        @js($flags->can_edit)
         )"
     @keydown.window="handleKeydown(event, $wire)">
     <!-- toolbar -->
     <x-header.bar class="opacity-0" x-bind:class="isFullscreen ? 'opacity-0 h-0' : 'opacity-100 h-14'">
-        <x-header.back x-bind:href="hrefBack" />
+        <x-header.back href="{{ route('livewire-gallery-album', ['albumId' => $this->albumId ]) }}" />
         <x-header.title>
             @if ($photo->is_starred)
                 <x-icons.iconic icon="star" fill='fill-yellow-400' class="my-0 w-3 h-3 mb-1 mr-0 ml-0" />
             @endif
             {{ $photo->title }}
         </x-header.title>
-        {{-- 
-        <a class="button button--share" id="button_share"><x-icons.iconic class='ionicons' icon="share-ion" /></a>
-        <a class="button button--map" id="button_map"><x-icons.iconic icon="map" /></a>
-        {{-- <x-header.button wire:click="openContextMenu" icon="ellipses" /> --}}
         @can(App\Policies\PhotoPolicy::CAN_DOWNLOAD, [App\Models\Photo::class, $photo])
             <x-header.button x-on:click="donwloadOpen = ! donwloadOpen" icon="cloud-download" fill=""
                 class="fill-neutral-400" x-bind:class="donwloadOpen ? 'fill-sky-500' : 'fill-neutral-400'" />
