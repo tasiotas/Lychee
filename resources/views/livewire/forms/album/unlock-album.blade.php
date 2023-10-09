@@ -2,7 +2,7 @@
     bg-black/80 fixed flex items-center justify-center w-full h-full top-0 left-0 box-border opacity-100"
     data-closable="true" >
     <div class="basicModal transition-opacity ease-in duration-1000
-        opacity-100 bg-gradient-to-b from-dark-300 to-dark-400
+        opacity-100 bg-gradient-to-b from-bg-300 to-bg-400
         relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp"
         role="dialog"
         >
@@ -23,11 +23,11 @@
             </form>
         </div>
         <div class="flex w-full box-border">
-            <x-forms.buttons.cancel class="border-t border-t-dark-800 rounded-bl-md w-full"
+            <x-forms.buttons.cancel class="border-t border-t-bg-800 rounded-bl-md w-full"
                 @keydown.escape.window="$parent.back()" x-on:click="$parent.back()">
                 {{ __('lychee.CANCEL') }}
             </x-forms.buttons.cancel>
-            <x-forms.buttons.action class="border-t border-t-dark-800 rounded-br-md w-full"
+            <x-forms.buttons.action class="border-t border-t-bg-800 rounded-br-md w-full"
                 @keydown.enter.window="$wire.submit()" wire:click="submit">
                 {{ __('lychee.ENTER') }}
             </x-forms.buttons.action>

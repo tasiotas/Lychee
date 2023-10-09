@@ -1,4 +1,4 @@
-<div id="lychee_sidebar" class="border-t border-solid border-sky-500 text-neutral-200 w-full">
+<div id="lychee_sidebar" class="border-t border-solid border-primary-500 text-neutral-200 w-full">
     <form class="w-full flex justify-center">
         <div
             class="xl:w-1/2 flex justify-center flex-wrap text-neutral-200 text-sm p-9 sm:p-4 xl:px-9 max-sm:w-full sm:min-w-[32rem] flex-shrink-0">

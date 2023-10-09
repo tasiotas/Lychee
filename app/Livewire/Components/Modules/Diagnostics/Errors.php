@@ -17,7 +17,7 @@ class Errors extends Component
 		return '<p class="font-mono">
 	Diagnostics
 	-----------
-	<span class="text-sky-500 font-bold">    ' . __('lychee.LOADING') . ' ...</span>
+	<span class="text-primary-500 font-bold">    ' . __('lychee.LOADING') . ' ...</span>
 </p>
 ';
 	}

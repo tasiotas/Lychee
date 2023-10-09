@@ -17,12 +17,12 @@
     }"
         x-on:dragover.prevent="isDropping = true" x-on:dragleave.prevent="isDropping = false">
         @if (count($uploads) === 0)
-            <div class="absolute top-0 bottom-0 left-0 right-0 z-30 flex items-center justify-center bg-sky-500 opacity-90"
+            <div class="absolute top-0 bottom-0 left-0 right-0 z-30 flex items-center justify-center bg-primary-500 opacity-90"
                 x-show="isDropping">
                 <span class="text-3xl text-white">Release file to upload!</span>
             </div>
             <label
-                class="flex flex-col items-center justify-center hover:bg-dark-400 border border-dark-500 shadow cursor-pointer h-1/2 rounded-2xl p-6"
+                class="flex flex-col items-center justify-center hover:bg-bg-400 border border-bg-500 shadow cursor-pointer h-1/2 rounded-2xl p-6"
                 for="myFiles">
                 <h3 class="text-xl text-center">Click here to select files to upload</h3>
                 <em class="italic text-slate-400">(Or drag files to the page)</em>
@@ -46,12 +46,12 @@
             <h1 class="text-center text-white text-lg font-bold">{{ __('lychee.UPLOAD_UPLOADING') }}</h1>
             <div class="overflow-y-auto rounded max-h-[20rem]">
                 @foreach ($uploads as $i => $upl)
-                    <div class="pt-2 pr-4 pl-4 pb-2 bg-dark-800">
+                    <div class="pt-2 pr-4 pl-4 pb-2 bg-bg-800">
                         <label class="flow-root">
                             <div class="float-left">{{ $upl['fileName'] }}</div>
                             @switch($upl['stage'])
                                 @case('uploading')
-                                    <div class="float-right text-sky-400">{{ $upl['progress'] }}%</div>
+                                    <div class="float-right text-primary-400">{{ $upl['progress'] }}%</div>
                                 @break
 
                                 @case('processing')
@@ -83,7 +83,7 @@
                         <div class="h-1 w-full bg-green-600"></div>
                         @else
                         <div class="h-1 w-full bg-neutral-800">
-                            <div class="h-1 bg-sky-400" style="width: {{ $upl['progress'] }}%"></div>
+                            <div class="h-1 bg-primary-400" style="width: {{ $upl['progress'] }}%"></div>
                         </div>
                         @endif
                     </div>

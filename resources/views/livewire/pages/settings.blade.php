@@ -41,8 +41,8 @@
 			<div class="my-4">
 				<p>{{ __('lychee.CSS_TEXT') }}</p>
 				<textarea id="css" class="p-2 h-28 bg-transparent text-white border border-solid border-neutral-400 resize-y w-full
-					hover:border-sky-400
-					focus:border-sky-400 focus-visible:outline-none">
+					hover:border-primary-400
+					focus:border-primary-400 focus-visible:outline-none">
 				</textarea>
 				<div class="basicModal__buttons">
 					<x-forms.buttons.action class="rounded-md w-full" >Change CSS</x-forms.buttons.action>

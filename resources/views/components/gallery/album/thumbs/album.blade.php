@@ -17,14 +17,14 @@
 	data-id='{{ $id }}'
 	x-on:contextmenu.prevent="handleContextAlbum($event, $wire)"
 	x-on:click='handleClickAlbum($event, $wire)'
-	x-bind:class="selectedAlbums.includes('{{ $id }}') ? 'outline outline-1 outline-sky-500' : ''"
+	x-bind:class="selectedAlbums.includes('{{ $id }}') ? 'outline outline-1 outline-primary-500' : ''"
 	{{-- data-nsfw='{{ $is_nsfw ? '1' : '0'}}' --}}
 	>
-	<x-gallery.album.thumbs.album-thumb class="group-hover:border-sky-500 group-hover:-rotate-2 group-hover:-translate-x-3 group-hover:translate-y-2"
+	<x-gallery.album.thumbs.album-thumb class="group-hover:border-primary-500 group-hover:-rotate-2 group-hover:-translate-x-3 group-hover:translate-y-2"
 		type="{{ $thumb?->type ?? '' }}" thumb="{{ $thumb?->thumbUrl ?? '' }}" thumb2x="{{ $thumb?->thumb2xUrl ?? '' }}" />
-	<x-gallery.album.thumbs.album-thumb class="group-hover:border-sky-500 group-hover:rotate-6 group-hover:translate-x-3  group-hover:-translate-y-2"
+	<x-gallery.album.thumbs.album-thumb class="group-hover:border-primary-500 group-hover:rotate-6 group-hover:translate-x-3  group-hover:-translate-y-2"
 		type="{{ $thumb?->type ?? '' }}" thumb="{{ $thumb?->thumbUrl ?? '' }}" thumb2x="{{ $thumb?->thumb2xUrl ?? '' }}" />
-	<x-gallery.album.thumbs.album-thumb class="group-hover:border-sky-500"
+	<x-gallery.album.thumbs.album-thumb class="group-hover:border-primary-500"
 		type="{{ $thumb?->type ?? '' }}" thumb="{{ $thumb?->thumbUrl ?? '' }}" thumb2x="{{ $thumb?->thumb2xUrl ?? '' }}" />
 	<div class='overlay absolute mb-[1px] mx-[1px] p-0 border-0 w-[calc(100%-2px)] bottom-0 bg-gradient-to-t from-[#00000099] text-shadow-sm'>
 		<h1 class="w-full pt-3 pb-1 pr-1 pl-4 text-sm text-white font-bold text-ellipsis whitespace-nowrap overflow-x-hidden" title='{{ $title }}'>{{ $title }}</h1>

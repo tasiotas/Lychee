@@ -31,7 +31,7 @@
 				:src="imgSrc" :srcset="imgSrcset">
 		</div>
 		<div x-ref="shutter"
-			class="absolute w-screen h-screen bg-dark-900 transition-opacity duration-1000 ease-in-out top-0 left-0">
+			class="absolute w-screen h-screen bg-bg-900 transition-opacity duration-1000 ease-in-out top-0 left-0">
 		</div>
 	</div>
 </div>

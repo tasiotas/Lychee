@@ -10,7 +10,7 @@
             </p>
         </div>
         <div class="flex w-full box-border">
-            <x-forms.buttons.cancel class="border-t border-t-dark-800 rounded-bl-md w-full"
+            <x-forms.buttons.cancel class="border-t border-t-bg-800 rounded-bl-md w-full"
                 @keydown.escape.window="$wire.close()" wire:click="close">
                 {{ __('lychee.DONT_MERGE') }}
             </x-forms.buttons.cancel>
@@ -29,7 +29,7 @@
             <livewire:forms.album.search-album lazy :parent_id="$parent_id" :lft="$lft" :rgt="$rgt" />
         </div>
         <div class="flex w-full box-border">
-            <x-forms.buttons.cancel class="border-t border-t-dark-800 rounded-bl-md w-full" wire:click="close">
+            <x-forms.buttons.cancel class="border-t border-t-bg-800 rounded-bl-md w-full" wire:click="close">
                 {{ __('lychee.CANCEL') }}
             </x-forms.buttons.cancel>
         </div>

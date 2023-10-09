@@ -31,7 +31,7 @@
             x-transition:leave="transition ease-in duration-100"
             x-transition:leave-start="opacity-100"
             x-transition:leave-end="opacity-0"
-            class="max-w-sm w-full text-white bg-dark-400 shadow-lg rounded-lg pointer-events-auto"
+            class="max-w-sm w-full text-white bg-bg-400 shadow-lg rounded-lg pointer-events-auto"
         >
             <div class="rounded-lg shadow-lg overflow-hidden">
                 <div class="p-4">

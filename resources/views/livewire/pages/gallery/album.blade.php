@@ -13,7 +13,7 @@
         <x-header.actions-menus />
         @can(App\Policies\AlbumPolicy::CAN_EDIT, [App\Contracts\Models\AbstractAlbum::class, $this->album])
             @if ($flags->is_base_album)
-                <x-header.button x-on:click="detailsOpen = false" icon="chevron-top" fill="fill-sky-500" x-cloak
+                <x-header.button x-on:click="detailsOpen = false" icon="chevron-top" fill="fill-primary-500" x-cloak
                     x-show="detailsOpen" />
                 <x-header.button x-on:click="detailsOpen = true" icon="chevron-bottom" x-cloak x-show="!detailsOpen" />
             @endif
@@ -60,7 +60,7 @@
                             class="my-0 w-5 h-5 mr-0 ml-0 transition-all duration-300
                         group-hover:scale-150 group-hover:stroke-white"
                             fill="" icon="squares"
-                            x-bind:class="layout === 'square' ? 'stroke-sky-400' : 'stroke-neutral-400'" />
+                            x-bind:class="layout === 'square' ? 'stroke-primary-400' : 'stroke-neutral-400'" />
                     </a>
                     <a class="flex-shrink-0 px-1 cursor-pointer group" x-on:click="layout = 'justified'"
                         title="{{ __('lychee.LAYOUT_JUSTIFIED') }}">
@@ -68,7 +68,7 @@
                             class="my-0 w-5 h-5 mr-0 ml-0 transition-all duration-300
                         group-hover:scale-150 group-hover:fill-white"
                             fill="" icon="justified"
-                            x-bind:class="layout === 'justified' ? 'fill-sky-400' : 'fill-neutral-400'" />
+                            x-bind:class="layout === 'justified' ? 'fill-primary-400' : 'fill-neutral-400'" />
                     </a>
                     <a class="flex-shrink-0 px-1 cursor-pointer group" x-on:click="layout = 'masonry'"
                         title="{{ __('lychee.LAYOUT_MASONRY') }}">
@@ -76,7 +76,7 @@
                             class="my-0 w-5 h-5 mr-0 ml-0 transition-all duration-300
                         group-hover:scale-150 group-hover:stroke-white"
                             fill="" icon="masonry"
-                            x-bind:class="layout === 'masonry' ? 'stroke-sky-400' : 'stroke-neutral-400'" />
+                            x-bind:class="layout === 'masonry' ? 'stroke-primary-400' : 'stroke-neutral-400'" />
                     </a>
                     <a class="flex-shrink-0 px-1 cursor-pointer group" x-on:click="layout = 'grid'"
                         title="{{ __('lychee.LAYOUT_GRID') }}">
@@ -84,7 +84,7 @@
                             class="my-0 w-5 h-5 mr-0 ml-0 transition-all duration-300
                         group-hover:scale-150 group-hover:stroke-white"
                             fill="" icon="grid"
-                            x-bind:class="layout === 'grid' ? 'stroke-sky-400' : 'stroke-neutral-400'" />
+                            x-bind:class="layout === 'grid' ? 'stroke-primary-400' : 'stroke-neutral-400'" />
                     </a>
                 </div>
             @endif

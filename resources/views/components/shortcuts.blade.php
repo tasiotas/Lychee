@@ -7,7 +7,7 @@
     x-cloak
     x-show="shortCutsOpen">
     <div class="basicModal transition-opacity ease-in duration-1000
-        opacity-100 bg-gradient-to-b from-dark-300 to-dark-400
+        opacity-100 bg-gradient-to-b from-bg-300 to-bg-400
         relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp overflow-hidden"
         role="dialog" x-on:click.away="shortCutsOpen = !shortCutsOpen">
         <h1 class="text-center text-white text-xl font-bold w-full border-b border-b-black/20 p-3">Keyboard shortcuts</h1>

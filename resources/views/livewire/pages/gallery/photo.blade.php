@@ -17,17 +17,17 @@
         </x-header.title>
         @can(App\Policies\PhotoPolicy::CAN_DOWNLOAD, [App\Models\Photo::class, $photo])
             <x-header.button x-on:click="donwloadOpen = ! donwloadOpen" icon="cloud-download" fill=""
-                class="fill-neutral-400" x-bind:class="donwloadOpen ? 'fill-sky-500' : 'fill-neutral-400'" />
+                class="fill-neutral-400" x-bind:class="donwloadOpen ? 'fill-primary-500' : 'fill-neutral-400'" />
         @endcan
         @can(App\Policies\PhotoPolicy::CAN_EDIT, [App\Models\Photo::class, $photo])
             <x-header.button x-on:click="editOpen = ! editOpen" icon="pencil" fill=""
-                x-bind:class="editOpen ? 'fill-sky-500' : 'fill-neutral-400'" />
+                x-bind:class="editOpen ? 'fill-primary-500' : 'fill-neutral-400'" />
         @endcan
         <x-header.button x-on:click="detailsOpen = ! detailsOpen" icon="info" fill=""
             @class([
-                'fill-sky-500' => $sessionFlags->are_photo_details_open,
+                'fill-primary-500' => $sessionFlags->are_photo_details_open,
                 'fill-neutral-400' => !$sessionFlags->are_photo_details_open,
-            ]) x-bind:class="detailsOpen ? 'fill-sky-500' : 'fill-neutral-400'" />
+            ]) x-bind:class="detailsOpen ? 'fill-primary-500' : 'fill-neutral-400'" />
 
     </x-header.bar>
     <div class="w-full flex h-full overflow-hidden bg-black">
@@ -101,12 +101,12 @@
                             class="{{ $photo->is_starred ? 'fill-yellow-500 hover:fill-yellow-100' : 'fill-white hover:fill-yellow-500' }}"
                             x-on:click="$wire.set_star()" />
                         @if ($flags->can_rotate)
-                            <x-gallery.photo.button icon="counterclockwise" class="fill-white hover:fill-sky-500"
+                            <x-gallery.photo.button icon="counterclockwise" class="fill-white hover:fill-primary-500"
                                 x-on:click="$wire.ccw()" />
-                            <x-gallery.photo.button icon="clockwise" class="fill-white hover:fill-sky-500"
+                            <x-gallery.photo.button icon="clockwise" class="fill-white hover:fill-primary-500"
                                 x-on:click="$wire.cw()" />
                         @endif
-                        <x-gallery.photo.button icon="transfer" class="fill-white hover:fill-sky-500"
+                        <x-gallery.photo.button icon="transfer" class="fill-white hover:fill-primary-500"
                             x-on:click="$wire.move()" />
                         <x-gallery.photo.button icon="trash" class="fill-white hover:fill-red-600"
                             x-on:click="$wire.delete()" />
@@ -115,7 +115,7 @@
             @endcan
         </div>
         @can(App\Policies\PhotoPolicy::CAN_EDIT, [App\Models\Photo::class, $photo])
-            <div class="h-full relative overflow-clip w-0 bg-dark-800 transition-all"
+            <div class="h-full relative overflow-clip w-0 bg-bg-800 transition-all"
                 :class=" editOpen ? 'w-full' : 'w-0 translate-x-full'">
                 <livewire:modules.photo.properties :photo="$this->photo" :lazy="false" />
             </div>
@@ -131,7 +131,7 @@
             bg-black/80 z-50 fixed flex items-center justify-center w-full h-full top-0 left-0 box-border opacity-100"
             data-closable="true" x-cloak x-show="donwloadOpen">
             <div class="basicModal transition-opacity ease-in duration-1000
-        opacity-100 bg-gradient-to-b from-dark-300 to-dark-400
+        opacity-100 bg-gradient-to-b from-bg-300 to-bg-400
         relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp"
                 role="dialog" x-on:click.away="donwloadOpen = !donwloadOpen">
                 <x-gallery.photo.download :photo="$this->photo" />

@@ -1,6 +1,6 @@
 <aside id="default-sidebar" x-data="{ leftMenuOpen: @entangle('isOpen') }" x-bind:class="!leftMenuOpen ? '' : 'w-full sm:w-[250px]'"
     class="z-40 w-0 h-screen transition-width duration-500" aria-label="Sidebar">
-    <div class="h-full py-4 overflow-y-auto bg-dark-850 light:bg-neutral-50">
+    <div class="h-full py-4 overflow-y-auto bg-bg-900">
         <ul class="space-y-0.5">
             <x-leftbar.leftbar-item x-on:click="leftMenuOpen = ! leftMenuOpen" icon="chevron-left">
                 {{ __('lychee.CLOSE') }}
@@ -49,8 +49,7 @@
             @if ($has_dev_tools)
                 <li class="px-4 pt-14 pb-1">
                     <span
-                        class="p-2 rounded-lg text-neutral-400 light:text-dark-850
-                        light:bg-neutral-100 whitespace-nowrap text-base">
+                        class="p-2 rounded-lg text-text-main-400 whitespace-nowrap text-base">
                         Dev Tools
                     </span>
                 </li>

@@ -7,7 +7,7 @@
     x-cloak
     x-show="webAuthnOpen">
     <div class="basicModal transition-opacity ease-in duration-1000
-        opacity-100 bg-gradient-to-b from-dark-300 to-dark-400
+        opacity-100 bg-gradient-to-b from-bg-300 to-bg-400
         relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp"
         role="dialog" x-on:click.away="webAuthnOpen = !webAuthnOpen">
         <div class="w-full text-white/80 text-lg font-bold" x-show="isWebAuthnUnavailable()">
@@ -24,7 +24,7 @@
         </div>
         <div class="flex w-full box-border">
             <x-forms.buttons.cancel x-on:click="webAuthnOpen = false" class="border-t border-t-black/20 w-full hover:bg-white/[.02]"> {{ __('lychee.CLOSE') }}</x-forms.buttons.cancel>
-            <x-forms.buttons.action class="border-t border-t-dark-800 rounded-br-md w-full" x-on:click='login()'>{{ __('lychee.U2F') }}</x-forms.buttons.action>
+            <x-forms.buttons.action class="border-t border-t-bg-800 rounded-br-md w-full" x-on:click='login()'>{{ __('lychee.U2F') }}</x-forms.buttons.action>
         </div>
     </div>
 </div>

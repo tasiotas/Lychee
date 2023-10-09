@@ -5,7 +5,7 @@
 					h-full top-0 left-0 box-border opacity-100 menu-shadow"
             data-closable="true">
             <div class="basicModal transition-opacity ease-in duration-1000
-						opacity-100 bg-gradient-to-b from-dark-300 to-dark-400
+						opacity-100 bg-gradient-to-b from-bg-300 to-bg-400
 						relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp
 						"
                 role="dialog" x-on:click.away="$wire.closeModal()">

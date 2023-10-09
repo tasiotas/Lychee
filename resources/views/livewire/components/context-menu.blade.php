@@ -4,7 +4,7 @@
 	<div class="py-1 menu-shadow rounded-md
 		border-solid border-black/80 border
 		max-w-xs absolute
-		bg-gradient-to-b from-dark-400 to-dark-500
+		bg-gradient-to-b from-bg-400 to-bg-500
 		animate-scaleIn"
 		role="dialog"
 		x-on:click.away="$wire.closeContextMenu()"

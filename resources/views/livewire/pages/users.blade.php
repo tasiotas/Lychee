@@ -31,7 +31,7 @@
                         <x-icons.iconic class="fill-white w-4 h-4" icon="lock-unlocked" />
                     </span>
                 </p>
-                <a class="inline-block invisible w-1/6 pt-3 pb-4 border-t border-t-dark-800">Save</a>
+                <a class="inline-block invisible w-1/6 pt-3 pb-4 border-t border-t-bg-800">Save</a>
             </div>
             @foreach ($this->users as $user)
                 <livewire:modules.users.user-line :user="$user" key="user-{{ $user->id }}" />
