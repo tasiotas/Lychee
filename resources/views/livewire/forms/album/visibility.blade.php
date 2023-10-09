@@ -6,28 +6,28 @@
 			<p class="my-1.5">{{ __('lychee.ALBUM_PUBLIC_EXPL') }}</p>
 		</div>
 		<div @class(['relative h-12 my-4 pl-9 transition-color duration-300', 
-			'text-neutral-500'=> !$is_public,
+			'text-text-main-400'=> !$is_public,
 			'text-neutral-200' => $is_public ])>
 			<label class="font-bold block " for="pp_dialog_full_check">{{ __('lychee.ALBUM_FULL') }}</label>
 			<x-forms.defaulttickbox id="pp_dialog_full_check" wire:model.live='grants_full_photo_access' :disabled="!$is_public" />
 			<p class="my-1.5">{{ __('lychee.ALBUM_FULL_EXPL') }}</p>
 		</div>
 		<div @class(['relative h-12 my-4 pl-9 transition-color duration-300', 
-			'text-neutral-500'=> !$is_public,
+			'text-text-main-400'=> !$is_public,
 			'text-neutral-200' => $is_public ])>
 			<label class="font-bold block " for="pp_dialog_link_check">{{ __('lychee.ALBUM_HIDDEN') }}</label>
 			<x-forms.defaulttickbox id="pp_dialog_link_check" wire:model.live='is_link_required' :disabled="!$is_public" />
 			<p class="my-1.5">{{ __('lychee.ALBUM_HIDDEN_EXPL') }}</p>
 		</div>
 		<div @class(['relative h-12 my-4 pl-9 transition-color duration-300', 
-			'text-neutral-500'=> !$is_public,
+			'text-text-main-400'=> !$is_public,
 			'text-neutral-200' => $is_public ])>
 			<label class="font-bold block " for="pp_dialog_downloadable_check">{{ __('lychee.ALBUM_DOWNLOADABLE') }}</label>
 			<x-forms.defaulttickbox id="pp_dialog_downloadable_check" wire:model.live='grants_download' :disabled="!$is_public" />
 			<p class="my-1.5">{{ __('lychee.ALBUM_DOWNLOADABLE_EXPL') }}</p>
 		</div>
 		<div @class(['relative h-12 my-4 pl-9 transition-color duration-300', 
-			'text-neutral-500'=> !$is_public,
+			'text-text-main-400'=> !$is_public,
 			'text-neutral-200' => $is_public ])>
 			<label class="font-bold block " for="pp_dialog_password_check">{{ __('lychee.ALBUM_PASSWORD_PROT') }}</label>
 			<x-forms.defaulttickbox id="pp_dialog_password_check" wire:model.live='is_password_required' :disabled="!$is_public" />

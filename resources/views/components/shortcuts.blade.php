@@ -8,10 +8,10 @@
     x-show="shortCutsOpen">
     <div class="basicModal transition-opacity ease-in duration-1000
         opacity-100 bg-gradient-to-b from-bg-300 to-bg-400
-        relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp overflow-hidden"
+        relative w-[500px] text-sm rounded-md text-text-main-400 animate-moveUp overflow-hidden"
         role="dialog" x-on:click.away="shortCutsOpen = !shortCutsOpen">
-        <h1 class="text-center text-white text-xl font-bold w-full border-b border-b-black/20 p-3">Keyboard shortcuts</h1>
-        <div class="flex flex-wrap gap-0.5 justify-center align-top text-white/80 max-h-[80vh] overflow-y-auto">
+        <h1 class="text-center text-text-main-0 text-xl font-bold w-full border-b border-b-black/20 p-3">Keyboard shortcuts</h1>
+        <div class="flex flex-wrap gap-0.5 justify-center align-top text-text-main-100 max-h-[80vh] overflow-y-auto">
             <x-help.table>
                 <x-help.head>Site-wide Shortcuts</x-help.head>
                 <x-help.cell>Back/Cancel</x-help.cell>

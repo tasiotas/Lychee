@@ -9,7 +9,7 @@
         role="dialog" x-on:click.away="sharingLinksOpen = false"
         {{-- x-data={qrCodeOpen:false} --}}
         >
-        <div class="flex flex-wrap p-9 gap-5 justify-center align-top text-white/80"
+        <div class="flex flex-wrap p-9 gap-5 justify-center align-top text-text-main-0/80"
             {{-- x-show="!qrCodeOpen" --}}
             >
                 <x-icons.iconic class="w-10 h-10 ionicons cursor-pointer" icon="twitter" x-on:click="window.open('{{ $twitter_link }}')" />
@@ -22,7 +22,7 @@
                 </a>
 				{{-- <x-icons.iconic class="w-10 h-10" icon="grid-two-up" x-on:click="qrCodeOpen = true; setQrCode('{{ $rawUrl }}');" /> --}}
 		</div>
-        {{-- <div class="flex flex-wrap p-9 gap-5 justify-center align-top text-white/80" x-show="qrCodeOpen">
+        {{-- <div class="flex flex-wrap p-9 gap-5 justify-center align-top text-text-main-0/80" x-show="qrCodeOpen">
             <canvas id="canvas"></canvas>
         </div> --}}
         <div class="basicModal__buttons">

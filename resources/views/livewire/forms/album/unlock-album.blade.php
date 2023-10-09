@@ -6,7 +6,7 @@
         relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp"
         role="dialog"
         >
-        <div class="flex flex-wrap p-9 gap-5 justify-center align-top text-white/80">
+        <div class="flex flex-wrap p-9 gap-5 justify-center align-top text-text-main-0/80">
             <x-forms.error-message field='password' />
             <form class="" wire:submit="submit">
                 <div class="my-4 mx-0">

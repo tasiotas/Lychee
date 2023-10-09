@@ -20,9 +20,9 @@
             <div class="users_view_line w-full flex mt-5 border-b border-solid border-neutral-600 pb-3">
                 <p class="full w-full flex">
                     <span
-                        class="inline-block text font-bold w-full pt-2 px-1 mr-2 mt-2.5 text-white">{{ __('lychee.USERNAME') }}</span>
+                        class="inline-block text font-bold w-full pt-2 px-1 mr-2 mt-2.5 text-text-main-0">{{ __('lychee.USERNAME') }}</span>
                     <span
-                        class="inline-block text font-bold w-full pt-2 px-1 mr-2 mt-2.5 text-white">{{ __('lychee.LOGIN_PASSWORD') }}</span>
+                        class="inline-block text font-bold w-full pt-2 px-1 mr-2 mt-2.5 text-text-main-0">{{ __('lychee.LOGIN_PASSWORD') }}</span>
                     <span class="inline-block text_icon mt-2.5 w-12 mx-2" title="{{ __('lychee.ALLOW_UPLOADS') }}">
                         <x-icons.iconic class="fill-white w-4 h-4" icon="data-transfer-upload" />
                     </span>

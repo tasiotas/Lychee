@@ -18,7 +18,7 @@
 		@keydown.shift.tab="isOpen = false"
 	>
 	<div class="absolute top-0">
-		<svg class="fill-current w-4 text-neutral-500 mt-2 ml-2" viewBox="0 0 24 24">
+		<svg class="fill-current w-4 text-text-main-400 mt-2 ml-2" viewBox="0 0 24 24">
 			<path d="M16.32 14.9l5.39 5.4a1 1 0 01-1.42 1.4l-5.38-5.38a8 8 0 111.41-1.41zM10 16a6 6 0 100-12 6 6 0 000 12z"/>
 		</svg>
 	</div>
@@ -31,7 +31,7 @@
 			<ul class=" max-h-[50vh] overflow-y-auto">
 				@foreach ($this->albumList as $result)
 					<li class="border-b border-neutral-700 cursor-pointer transition-all ease-in-out duration-300
-						hover:bg-gradient-to-b hover:from-primary-500 hover:to-primary-600 hover:text-white"
+						hover:bg-gradient-to-b hover:from-primary-500 hover:to-primary-600 hover:text-text-main-0"
 						wire:click="$parent.setAlbum('{{ $result['id'] }}', '{{ $result['original'] }}')">
 						<a class="px-3 py-1 flex items-center"
 							@if ($loop->last) @keydown.tab="isOpen = false" @endif

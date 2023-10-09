@@ -19,7 +19,7 @@
         @if (count($uploads) === 0)
             <div class="absolute top-0 bottom-0 left-0 right-0 z-30 flex items-center justify-center bg-primary-500 opacity-90"
                 x-show="isDropping">
-                <span class="text-3xl text-white">Release file to upload!</span>
+                <span class="text-3xl text-text-main-0">Release file to upload!</span>
             </div>
             <label
                 class="flex flex-col items-center justify-center hover:bg-bg-400 border border-bg-500 shadow cursor-pointer h-1/2 rounded-2xl p-6"
@@ -43,7 +43,7 @@
             "
                 class="hidden">
         @else
-            <h1 class="text-center text-white text-lg font-bold">{{ __('lychee.UPLOAD_UPLOADING') }}</h1>
+            <h1 class="text-center text-text-main-0 text-lg font-bold">{{ __('lychee.UPLOAD_UPLOADING') }}</h1>
             <div class="overflow-y-auto rounded max-h-[20rem]">
                 @foreach ($uploads as $i => $upl)
                     <div class="pt-2 pr-4 pl-4 pb-2 bg-bg-800">
@@ -67,7 +67,7 @@
                                 @break
 
                                 @case('error')
-                                    <div class="float-right text-red-600 font-bold">{{ __('lychee.UPLOAD_FAILED') }}</div>
+                                    <div class="float-right text-danger-600 font-bold">{{ __('lychee.UPLOAD_FAILED') }}</div>
                                 @break
 
                                 @default

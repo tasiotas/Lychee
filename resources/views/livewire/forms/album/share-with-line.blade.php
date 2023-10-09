@@ -13,7 +13,7 @@
 		</span>
 		<a class="basicModal__button pt-0.5 pb-0.5 w-20 rounded flex-shrink
 			cursor-pointer inline-block font-bold text-center transition-colors ease-in-out select-none
-			text-red-800 hover:text-white hover:bg-red-800"  wire:click="$parent.delete('{{ $perm->id }}')">
+			text-red-800 hover:text-text-main-0 hover:bg-red-800"  wire:click="$parent.delete('{{ $perm->id }}')">
 			{{ __('lychee.DELETE') }}
 		</a>
 	</p>

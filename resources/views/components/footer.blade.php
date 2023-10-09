@@ -26,13 +26,13 @@
 	</div>
 	@endif
 	@isset($copyright)
-		<p class="home_copyright w-full uppercase text-neutral-400 leading-6 font-normal">{{ $copyright }}</p>
+		<p class="home_copyright w-full uppercase text-text-main-400 leading-6 font-normal">{{ $copyright }}</p>
 	@endisset
 	@isset($personal_text)
-		<p class="personal_text w-full text-neutral-400 leading-6 font-normal">{{ $personal_text }}</p>
+		<p class="personal_text w-full text-text-main-400 leading-6 font-normal">{{ $personal_text }}</p>
 	@endisset
 	@isset($hosted_by)
-	<p class="hosted_by w-full uppercase text-neutral-400 leading-6 font-normal">
+	<p class="hosted_by w-full uppercase text-text-main-400 leading-6 font-normal">
 		<a rel="noopener noreferrer" target="_blank" href="https://LycheeOrg.github.io" tabindex="-1"
 		class="underline">{{ $hosted_by }}</a>
 	</p>

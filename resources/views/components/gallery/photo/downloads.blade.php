@@ -1,4 +1,4 @@
-<div class="flex flex-wrap gap-0.5 justify-center align-top text-white/80 p-9">
+<div class="flex flex-wrap gap-0.5 justify-center align-top text-text-main-0/80 p-9">
     @foreach ($size_variants as $size_variant)
         <a class="border border-solid
         border-black/20 cursor-pointer block w-full rounded-md my-1.5 p-3
@@ -8,7 +8,7 @@
             text-sm
             transition-all
             ease-in-out select-none
-            text-primary-500 hover:bg-primary-500 hover:text-white
+            text-primary-500 hover:bg-primary-500 hover:text-text-main-0
             fill-primary-500 hover:fill-white"
             href="{{ route('photo_download',['photoIDs' => $photoId, 'kind' => $size_variant['type']->name]) }}"
             >

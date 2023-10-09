@@ -34,14 +34,14 @@ class Errors extends Component
 			$arr = ['color' => '', 'type' => '', 'line' => $line];
 
 			if (Str::startsWith($line, 'Warning: ')) {
-				$arr['color'] = 'text-yellow-500';
+				$arr['color'] = 'text-warning-600';
 				$arr['type'] = 'Warning:';
 				$arr['line'] = Str::substr($line, 9);
 			}
 
 			if (Str::startsWith($line, 'Error: ')) {
 				// @codeCoverageIgnoreStart
-				$arr['color'] = 'text-red-500';
+				$arr['color'] = 'text-danger-600';
 				$arr['type'] = 'Error:';
 				$arr['line'] = Str::substr($line, 7);
 				// @codeCoverageIgnoreEnd

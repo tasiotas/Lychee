@@ -22,7 +22,7 @@
 			<p class="single">Credentials list is empty!</p>
 		</div>
 	@endforelse
-	<div class="w-full text-white/80 text-lg font-bold" x-show="isWebAuthnUnavailable()" x-cloak>
+	<div class="w-full text-text-main-0/80 text-lg font-bold" x-show="isWebAuthnUnavailable()" x-cloak>
 		<h1 class="p-3 text-center w-full">{{ __('lychee.U2F_NOT_SECURE') }}</h1>
 	</div>
 	<div class="u2f_view_line" x-show="!isWebAuthnUnavailable()" x-cloak>
