@@ -4,25 +4,25 @@
             class="xl:w-1/2 flex justify-center flex-wrap text-neutral-200 text-sm p-9 sm:p-4 xl:px-9 max-sm:w-full sm:min-w-[32rem] flex-shrink-0">
             <div class="mb-4 w-full">
                 <p class="font-bold">{{ __('lychee.PHOTO_SET_TITLE') }}</p>
-                <p class="text-neutral-400">{{ __('lychee.PHOTO_NEW_TITLE') }}</p>
+                <p class="text-text-main-400">{{ __('lychee.PHOTO_NEW_TITLE') }}</p>
                 <x-forms.inputs.text wire:model='title' />
                 <x-forms.error-message field='title' />
             </div>
             <div class="my-4 w-full">
                 <p class="font-bold">{{ __('lychee.PHOTO_SET_DESCRIPTION') }}</p>
-                <p class="text-neutral-400">{{ __('lychee.PHOTO_NEW_DESCRIPTION') }}</p>
+                <p class="text-text-main-400">{{ __('lychee.PHOTO_NEW_DESCRIPTION') }}</p>
                 <x-forms.textarea class="w-full h-52" wire:model="description"></x-forms.textarea>
                 <x-forms.error-message field='description' />
             </div>
             <div class="my-4 w-full">
                 <p class="font-bold">{{ __('lychee.PHOTO_SET_TAGS')}}</p>
-                <p class="text-neutral-400">{{ __('lychee.PHOTO_NEW_TAGS') }}</p>
+                <p class="text-text-main-400">{{ __('lychee.PHOTO_NEW_TAGS') }}</p>
                 <x-forms.inputs.text wire:model='tags_with_comma' />
                 <x-forms.error-message field='tags' />
             </div>
             <div class="my-4 w-full">
                 <p class="font-bold">{{ __('lychee.PHOTO_SET_CREATED_AT') }}</p>
-                <p class="text-neutral-400">{{ __('lychee.PHOTO_NEW_CREATED_AT') }}</p>
+                <p class="text-text-main-400">{{ __('lychee.PHOTO_NEW_CREATED_AT') }}</p>
                 <x-forms.inputs.date wire:model='created_at' />
             </div>
             <div class="my-4 w-full">

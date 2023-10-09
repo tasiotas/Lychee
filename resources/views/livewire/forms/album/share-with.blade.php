@@ -50,7 +50,7 @@
 			<p class="my-3 w-full">Select the users to share this album with: </p>
             <input wire:model.live.debounce.500ms="search" type="text"
                 class="bg-neutral-800 text-sm rounded-full w-56 px-2 pl-8 py-1 focus:outline-none focus:shadow-outline
-				placeholder:text-neutral-400"
+				placeholder:text-text-main-400"
                 placeholder="Search (Press '/' to focus)" x-ref="search"
                 @keydown.window="
 				if (event.keyCode === 191) {

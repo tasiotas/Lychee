@@ -4,7 +4,7 @@
         <x-header.title>{{ __('lychee.SETTINGS') }}</x-header.title>
     </x-header.bar>
 	<div class="overflow-x-clip overflow-y-auto h-[calc(100vh-56px)]">
-		<div class="settings_view w-10/12 max-w-2xl text-neutral-400 text-sm mx-auto">
+		<div class="settings_view w-10/12 max-w-2xl text-text-main-400 text-sm mx-auto">
 			<div class="pt-12">
 				<p class="warning">
 					{{ __("lychee.SETTINGS_ADVANCED_WARNING_EXPL") }}

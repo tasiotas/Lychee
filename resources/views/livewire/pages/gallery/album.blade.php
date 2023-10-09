@@ -37,7 +37,7 @@
                 <x-gallery.album.details :album="$this->album" :url="$this->header_url" x-show="! detailsOpen" />
             @endif
             @if ($num_children === 0 && $num_photos === 0)
-                <span class="mt-[33%] w-full text-center text-xl text-neutral-400 align-middle">
+                <span class="mt-[33%] w-full text-center text-xl text-text-main-400 align-middle">
                     Nothing to see here
                 </span>
             @endif

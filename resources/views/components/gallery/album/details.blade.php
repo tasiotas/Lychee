@@ -17,7 +17,7 @@
             <span class="block text-neutral-200 text-sm">
                 {{ $num_photos }} {{ __('lychee.ALBUM_IMAGES') }}
                 @if($license !== '')
-                <span class="text-neutral-400 text-sm">
+                <span class="text-text-main-400 text-sm">
                     &mdash; {{ $license }}
                 </span>
             </span>

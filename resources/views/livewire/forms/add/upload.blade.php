@@ -76,7 +76,7 @@
                         </label>
                         @if ($upl['stage'] === 'error')
                         <div class="h-1 w-full bg-red-700"></div>
-                        <div class="text-neutral-400 text-left">
+                        <div class="text-text-main-400 text-left">
                             {{ __('lychee.UPLOAD_FAILED_ERROR') }}
                         </div>
                         @elseif($upl['stage'] === 'done')

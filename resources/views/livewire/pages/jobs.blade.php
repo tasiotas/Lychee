@@ -4,7 +4,7 @@
         <x-header.title>{{ __('lychee.JOBS') }}</x-header.title>
     </x-header.bar>
 	<div class="overflow-x-clip overflow-y-auto h-[calc(100vh-56px)]">
-		<div class="settings_view max-w-4xl text-neutral-400 text-sm mx-auto">
+		<div class="settings_view max-w-4xl text-text-main-400 text-sm mx-auto">
 			@forelse($this->jobs as $job)
 				<span class="mx-2">{{ $job->created_at }}</span>
 				@if($job->status->name() === 'success')

@@ -6,7 +6,7 @@
             data-closable="true">
             <div class="basicModal transition-opacity ease-in duration-1000
 						opacity-100 bg-gradient-to-b from-bg-300 to-bg-400
-						relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp
+						relative w-[500px] text-sm rounded-md text-text-main-400 animate-moveUp
 						"
                 role="dialog" x-on:click.away="$wire.closeModal()">
                 @livewire($type, compact('params'))

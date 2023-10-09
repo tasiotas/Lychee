@@ -18,7 +18,7 @@
             <ul class="menu list-none">
                 <li class="menu-item relative block float-right pt-6 pb-5 px-3">
                     {{-- Here we can also use livewire to directly open the gallery without reloading the full page --}}
-                    <a href="{{ route('livewire-gallery') }}" class="block text-xs uppercase font-normal text-text-main-0 hover:text-neutral-400 "
+                    <a href="{{ route('livewire-gallery') }}" class="block text-xs uppercase font-normal text-text-main-0 hover:text-text-main-400 "
                         wire:navigate.hover >{{ __('lychee.GALLERY') }}</a>
                 </li>
             </ul>
@@ -32,7 +32,7 @@
 			<h1 class="
 				text-center text-2xl  text-text-main-0       uppercase font-extralight animate-landingIntroPopIn">{{ $title }}</h1>
 			<h2><span class="
-				text-center text-base text-neutral-400 uppercase font-extralight animate-landingIntroPopIn">{{ $subtitle }}</span></h2>
+				text-center text-base text-text-main-400 uppercase font-extralight animate-landingIntroPopIn">{{ $subtitle }}</span></h2>
 		</div>
 	</div>
 

@@ -26,7 +26,7 @@
         @if ($this->smartAlbums->isEmpty() && $this->albums->isEmpty() && $this->sharedAlbums->isEmpty())
             <div class="h-full flex flex-col justify-center"  x-init='loginModalOpen = true'>
                 <div class="w-full text-center"><x-icons.iconic icon="eye" /></div>
-                <p class="w-full text-center text-neutral-400">{{ __('lychee.VIEW_NO_PUBLIC_ALBUMS') }}</p>
+                <p class="w-full text-center text-text-main-400">{{ __('lychee.VIEW_NO_PUBLIC_ALBUMS') }}</p>
             </div>
         @else
             <div class="flex flex-wrap flex-row flex-shrink w-full justify-start align-top">
@@ -62,7 +62,7 @@
             data-closable="true" x-cloak x-show="loginModalOpen">
             <div class="basicModal transition-opacity ease-in duration-1000
                 opacity-100 bg-gradient-to-b from-bg-300 to-bg-400
-                relative w-[500px] text-sm rounded-md text-neutral-400 animate-moveUp
+                relative w-[500px] text-sm rounded-md text-text-main-400 animate-moveUp
                 "
                 role="dialog" x-on:click.away="loginModalOpen = false">
                 <livewire:modals.login />

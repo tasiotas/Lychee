@@ -3,7 +3,7 @@
         <h1 class="col-span-2 text-center text-lg font-bold my-4">
             {{ __('lychee.ALBUM_ABOUT') }}
         </h1>
-        <h2 class="col-span-2 text-neutral-400 font-bold px-3 pt-4 pb-3">
+        <h2 class="col-span-2 text-text-main-400 font-bold px-3 pt-4 pb-3">
             {{ __('lychee.PHOTO_BASICS') }}
         </h2>
         <span class="py-0.5 pl-3 text-sm">{{ __('lychee.PHOTO_TITLE') }}</span>
@@ -16,7 +16,7 @@
                 @markdown{{ $description }}@endmarkdown
             </div>
         @endif
-        <h2 class="col-span-2 text-neutral-400 font-bold px-3 pt-4 pb-3">
+        <h2 class="col-span-2 text-text-main-400 font-bold px-3 pt-4 pb-3">
             {{ $is_video ? __('lychee.PHOTO_VIDEO') : __('lychee.PHOTO_IMAGE') }}
         </h2>
         <span class="py-0.5 pl-3 text-sm">{{ __('lychee.PHOTO_SIZE') }}</span>
@@ -38,7 +38,7 @@
             <span class="py-0.5 pl-0 text-sm">{{ $fps }} fps</span>
         @endif
         @if (count($tags) > 0)
-            <h2 class="col-span-2 text-neutral-400 font-bold px-3 pt-4 pb-3">
+            <h2 class="col-span-2 text-text-main-400 font-bold px-3 pt-4 pb-3">
                 {{ __('lychee.PHOTO_TAGS') }}
             </h2>
             <p class="py-0.5 pl-3 col-span-2 text-sm">
@@ -50,7 +50,7 @@
             </p>
         @endif
         @if ($has_exif)
-            <h2 class="col-span-2 text-neutral-400 font-bold px-3 pt-4 pb-3">
+            <h2 class="col-span-2 text-text-main-400 font-bold px-3 pt-4 pb-3">
                 {{ __('lychee.PHOTO_CAMERA') }}
             </h2>
             @if ($taken_at !== '')
@@ -87,7 +87,7 @@
             @endif
         @endif
         @if ($has_location)
-            <h2 class="col-span-2 text-neutral-400 font-bold px-3 pt-4 pb-3">
+            <h2 class="col-span-2 text-text-main-400 font-bold px-3 pt-4 pb-3">
                 {{ __('lychee.PHOTO_LOCATION') }}
             </h2>
             @if ($is_map_accessible)
@@ -118,7 +118,7 @@
             @endif
         @endif
         @if ($license !== '')
-            <h2 class="col-span-2 text-neutral-400 font-bold px-3 pt-4 pb-3">{{ __('lychee.PHOTO_LICENSE') }}</h2>
+            <h2 class="col-span-2 text-text-main-400 font-bold px-3 pt-4 pb-3">{{ __('lychee.PHOTO_LICENSE') }}</h2>
             <span class="col-span-2 py-0.5 pl-3 text-sm">{{ $license }}</span>
         @endif
     </div>
