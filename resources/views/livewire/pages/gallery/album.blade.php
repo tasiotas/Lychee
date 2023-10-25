@@ -100,14 +100,14 @@
                 x-masonry
             @elseif ($flags->layout() === AlbumLayoutType::GRID)
                 x-grid
+            @endif
+            >
+            @foreach ($this->album->photos as $photo)
+                <x-gallery.album.thumbs.photo :data="$photo" albumId="{{ $albumId }}" :layout="$flags->layout()" />
+            @endforeach
+            </div>
+            <livewire:pages.gallery.sensitive-warning :album="$this->album" />
+        </div>
+        <x-gallery.album.sharing-links :album="$this->album" x-show="sharingLinksOpen" />
     @endif
-    >
-    @foreach ($this->album->photos as $photo)
-        <x-gallery.album.thumbs.photo :data="$photo" albumId="{{ $albumId }}" :layout="$flags->layout()" />
-    @endforeach
-</div>
-<livewire:pages.gallery.sensitive-warning :album="$this->album" />
-</div>
-<x-gallery.album.sharing-links :album="$this->album" x-show="sharingLinksOpen" />
-@endif
 </div>

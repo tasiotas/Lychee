@@ -1,5 +1,5 @@
 <div class="w-full flex flex-col" x-data="photoView(
-        $wire.entangle('sessionFlags.are_photo_details_open'),
+        @entangle('sessionFlags.are_photo_details_open'),
         @entangle('sessionFlags.is_fullscreen'),
         @js($photo->description !== null),
         @js($overlayType),

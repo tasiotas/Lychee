@@ -7,7 +7,7 @@ public/dist/user.css
 public/dist/custom.js
 
 # Pictures we do not commit
-public/uploads/**
+public/uploads-*/**
 
 # Storage stuff: useless
 /storage/*.key

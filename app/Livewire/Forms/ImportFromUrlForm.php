@@ -10,9 +10,12 @@ use Livewire\Form;
 
 class ImportFromUrlForm extends Form
 {
-	#[Locked] public ?string $albumID = null;
+	#[Locked]
+	public ?string $albumID = null;
+	#[Locked]
 	/** @var array<int,string> */
-	#[Locked] public array $urls = [];
+	public array $urls = [];
+
 	public string $url = '';
 
 	/**
